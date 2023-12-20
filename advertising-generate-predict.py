@@ -7,8 +7,9 @@ import pandas as pd
 import seaborn as sns
 
 def load_keras_model():
-    model = load_model("path/to/your/keras/model.h5")  # Replace with the path to your Keras model file
+    modelANN = load_model("/content/AdvertisingANN.h5")  # Replace with the path to your Keras model file
     return model
+    
 st.write("# Simple Advertising Prediction App") #write title
 st.write("This app predicts the **Sales** type!") #write as subtitle
 
@@ -32,9 +33,6 @@ st.write(df)
 data = pd.read_csv('Advertising.csv')
 X = data.drop(['Sales'],axis=1)
 Y = data.Sales.copy()
-
-loaded_scaler = pickle.load(open("scaler_advertising.pkl", "rb"))
-loaded_model = pickle.load(open("Regression result - ANN.h5", "rb"))
 
 st.subheader('Prediction')
 st.write(prediction)
