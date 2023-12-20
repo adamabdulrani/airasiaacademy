@@ -3,7 +3,7 @@ from sklearn.preprocessing import MinMaxScaler
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
-from fromtensorflow.keras.optimizers import Adam
+from tensorflow.keras.optimizers import Adam
 import pandas as pd
 import seaborn as sns
 
