@@ -1,5 +1,4 @@
 import streamlit as st
-pip install tensorflow
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
@@ -7,6 +6,8 @@ from fromtensorflow.keras.optimizers import Adam
 import pandas as pd
 import seaborn as sns
 import pickle as pkl
+
+pip install tensorflow
 
 def load_keras_model():
     model = load_model("path/to/your/keras/model.h5")  # Replace with the path to your Keras model file
