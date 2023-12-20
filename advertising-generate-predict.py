@@ -7,8 +7,6 @@ import pandas as pd
 import seaborn as sns
 import pickle as pkl
 
-pip install tensorflow
-
 def load_keras_model():
     model = load_model("path/to/your/keras/model.h5")  # Replace with the path to your Keras model file
     return model
