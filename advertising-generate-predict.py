@@ -2,9 +2,10 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import pickle as pkl
-from keras.models import Sequential
-from keras.layers import Dense
-from keras.optimizers import Adam
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from fromtensorflow.keras.optimizers import Adam
 
 st.write("# Simple Advertising Prediction App") #write title
 st.write("This app predicts the **Sales** type!") #write as subtitle
