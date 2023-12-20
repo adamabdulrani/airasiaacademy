@@ -1,5 +1,5 @@
 import streamlit as st
-import sklearn.preprocessing.MinMaxScaler
+from sklearn.preprocessing import MinMaxScaler
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
