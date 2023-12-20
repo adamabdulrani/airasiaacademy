@@ -8,13 +8,13 @@ import pandas as pd
 import seaborn as sns
 
 def load_scaler():
-    loaded_scaler = pickle.load(open("scaler_titanic.pkl", "rb"))
+    loaded_scaler = pickle.load(open("scaler_advertising.pkl", "rb"))
     scaler = MinMaxScaler
     return scaler
 
 def load_keras_model():
     modelANN = load_model("/content/AdvertisingANN.h5")  # Replace with the path to your Keras model file
-    return model
+    return modelANN
     
 st.write("# Simple Advertising Prediction App") #write title
 st.write("This app predicts the **Sales** type!") #write as subtitle
