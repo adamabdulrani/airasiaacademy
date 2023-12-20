@@ -1,10 +1,16 @@
 import streamlit as st
+import from sklearn.preprocessing import MinMaxScaler
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from fromtensorflow.keras.optimizers import Adam
 import pandas as pd
 import seaborn as sns
+
+def load_scaler():
+    loaded_scaler = pickle.load(open("scaler_titanic.pkl", "rb"))
+    scaler = MinMaxScaler
+    return = scaler
 
 def load_keras_model():
     modelANN = load_model("/content/AdvertisingANN.h5")  # Replace with the path to your Keras model file
