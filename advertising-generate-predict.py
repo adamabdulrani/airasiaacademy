@@ -26,6 +26,7 @@ try:
         loaded_model = pickle.load(file)
 
 input_data = pd.DataFrame(df, index=[0])
+print(input_data)
 
                           input_data['MissingFeature'] = 0
 
