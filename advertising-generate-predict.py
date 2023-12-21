@@ -7,8 +7,6 @@ from tensorflow.keras.optimizers import Adam
 import pandas as pd
 import seaborn as sns
 
-
-
 st.write("# Simple Advertising Prediction App") #write title
 st.write("This app predicts the **Sales** type!") #write as subtitle
 
@@ -26,6 +24,9 @@ def user_input_features():
 
 df = user_input_features()
 
+st.subheader('User Input parameters') #alternate function untuk subheader
+st.write(df)
+
 data = pd.read_csv('Advertising.csv')
 X = data.drop(['Sales'],axis=1)
 Y = data.Sales.copy()
@@ -33,9 +34,6 @@ Y = data.Sales.copy()
 modelANN = load_model("/content/AdvertisingANN.h5")  # Replace with the path to your Keras model file
 
 predictions = modelANN.predict(df)
-
-st.subheader('User Input parameters') #alternate function untuk subheader
-st.write(df)
 
 st.subheader('Prediction')
 st.write(prediction)
