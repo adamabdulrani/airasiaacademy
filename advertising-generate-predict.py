@@ -18,7 +18,7 @@ def user_input_features():
     return data
 
 df = user_input_features()
-file_path = "AdvertisingANN.pkl"  # Change file extension to .pkl
+file_path = "AdvertisingANN.h5"  # Change file extension to .pkl
 
 try:
     with open(file_path, "rb") as file:
