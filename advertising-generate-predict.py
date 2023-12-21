@@ -23,7 +23,7 @@ try:
     with open(file_path, "rb") as file:
         loaded_model = pickle.load(file)
 
-input_data = pd.DataFrame(df, index=(0))
+input_data = pd.DataFrame(df, index=[0])
 
                           input_data['MissingFeature'] = 0
 
