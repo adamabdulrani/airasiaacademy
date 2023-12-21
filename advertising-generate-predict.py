@@ -17,7 +17,17 @@ def user_input_features():
     return data
 
 df = user_input_features()
+file_path = "AdvertisingANN.h5"
 
+try:
+    with open(file_path, "rb" as file:
+        loaded_model = pickle.load(file)
+
+input_data = pd.DataFrame(df, index=(0)
+
+                          input_data['MissingFeature'] = 0
+
+prediction = loaded_model.predict(input_data.values)
 st.subheader('User Input parameters') #alternate function untuk subheader
 st.write(df)
 
