@@ -1,12 +1,12 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import os
 
 st.write("# Simple Advertising Prediction App")  # Write title
 st.write("This app predicts the **Sales** type!")  # Write as subtitle
 
 st.sidebar.header('User Input Parameters')  # To create sidebar
-
 
 def user_input_features():
     TV = st.sidebar.slider('TV', 0.70, 296.40, 149.75)  # st.slider: element of interaction (name of sidebar, minimum value, maximum value, default) #sepal_length = variable
@@ -17,7 +17,6 @@ def user_input_features():
             'Newspaper': Newspaper}
     return data
 
-
 df = user_input_features()
 file_path = "AdvertisingANN.pkl"  # Change file extension to .pkl
 
@@ -26,7 +25,6 @@ try:
         loaded_model = pickle.load(file)
 
     input_data = pd.DataFrame(df, index=[0])
-    print(input_data)
 
     input_data['MissingFeature'] = 0  # Assuming this is a placeholder for a missing feature
 
@@ -38,6 +36,10 @@ try:
     st.write(prediction)
 
 except FileNotFoundError:
-    st.error(f"Model file {file_path} not found.")
+    st.error(f"Model file {file_path} not found. Please check the file path.")
 except Exception as e:
     st.error(f"An error occurred: {str(e)}")
+
+# Debugging information
+st.write("Current working directory:", os.getcwd())
+st.write("List of files in the directory:", os.listdir())
