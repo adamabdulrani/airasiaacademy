@@ -1,0 +1,8 @@
+altair
+streamlit
+pandas
+seaborn
+scikit-learn
+numpy
+tensorflow
+pickle
