@@ -9,7 +9,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.optimizers import Adam
 from keras.models import load_model
-import pickle
+import pickle as pkl
 
 st.write("# Simple Advertising Prediction App") #write title
 st.write("This app predicts the **Sales** type!") #write as subtitle
