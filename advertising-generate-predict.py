@@ -25,12 +25,8 @@ df = user_input_features()
 st.subheader('User Input parameters') #alternate function untuk subheader
 st.write(df)
 
-data = pd.read_csv('Advertising.csv')
-X = data.drop(['Sales'],axis=1)
-Y = data.Sales.copy()
-
-loaded_scaler = pickle.load(open("scaler_advertising.pkl", "rb"))
-loaded_model = pickle.load(open("Regression result - ANN.h5", "rb"))
+loaded_model = pickle.load(open("AdvertisingANN.h5", "rb"))
+prediction = AdvertisingANN.predict(df)
 
 st.subheader('Prediction')
 st.write(prediction)
