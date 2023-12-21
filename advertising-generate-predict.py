@@ -8,6 +8,8 @@ import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.optimizers import Adam
+import requests
+from io import BytesIO
 
 st.write("# Simple Advertising Prediction App") #write title
 st.write("This app predicts the **Sales** type!") #write as subtitle
@@ -29,7 +31,9 @@ df = user_input_features()
 st.subheader('User Input parameters') #alternate function untuk subheader
 st.write(df)
 
-modelANN =  pickle.load(open("AdvertisingANN.h5", "rb"))  # Replace with the path to your Keras model file
+raw_model_url = https://github.com/adamabdulrani/airasiaacademy/blob/b8b61fb719b94e497121cbffb469e405c0d85133/AdvertisingANN.h5  # Replace with the path to your Keras model file
+response = requests.get(raw_model_url)
+model_data = BytesIO(response.content)
 
 predictions = modelANN.predict(df)
 
