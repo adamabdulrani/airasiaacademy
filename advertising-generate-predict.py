@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import keras
+import tenserflow
 
 st.write("# Simple Advertising Prediction App") #write title
 st.write("This app predicts the **Sales** type!") #write as subtitle
