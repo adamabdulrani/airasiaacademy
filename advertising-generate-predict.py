@@ -22,7 +22,7 @@ def main():
     df = user_input_features()
 
     # Model loading and prediction
-    file_path = "AdvertisingANN.pkl"  # Assuming it's a Pickle file
+    file_path = "AdvertisingANN.h5"  # Assuming it's a Pickle file
     try:
         with open(file_path, "rb") as file:
             loaded_model = pickle.load(file)
