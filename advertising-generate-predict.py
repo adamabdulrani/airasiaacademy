@@ -29,7 +29,7 @@ df = user_input_features()
 st.subheader('User Input parameters') #alternate function untuk subheader
 st.write(df)
 
-modelANN = load_model("AdvertisingANN.h5")  # Replace with the path to your Keras model file
+modelANN =  pickle.load(open("AdvertisingANN.h5", "rb"))  # Replace with the path to your Keras model file
 
 predictions = modelANN.predict(df)
 
