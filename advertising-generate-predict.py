@@ -7,14 +7,8 @@ from tensorflow.keras.optimizers import Adam
 import pandas as pd
 import seaborn as sns
 
-def load_scaler():
-    scaler = pickle.dump(scaler, '/content/scaler_advertising.pkl')
-    return scaler
-    
-def load_keras_model():
-    modelANN = load_model("/content/AdvertisingANN.h5")  # Replace with the path to your Keras model file
-    return modelANN
-    
+
+
 st.write("# Simple Advertising Prediction App") #write title
 st.write("This app predicts the **Sales** type!") #write as subtitle
 
@@ -32,21 +26,16 @@ def user_input_features():
 
 df = user_input_features()
 
-def make_prediction(df, modelANN):
-    # Make predictions using the pre-trained model
-    predictions = model.predict(df)
-    return predictions
-
-st.subheader('User Input parameters') #alternate function untuk subheader
-st.write(df)
-
 data = pd.read_csv('Advertising.csv')
 X = data.drop(['Sales'],axis=1)
 Y = data.Sales.copy()
 
-def preprocess_input(data, scaler):
-    preprocessed_data = scaler.transform(data)
-    return preprocessed_data
+modelANN = load_model("/content/AdvertisingANN.h5")  # Replace with the path to your Keras model file
+
+predictions = modelANN.predict(df)
+
+st.subheader('User Input parameters') #alternate function untuk subheader
+st.write(df)
 
 st.subheader('Prediction')
 st.write(prediction)
