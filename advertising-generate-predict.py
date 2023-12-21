@@ -1,11 +1,12 @@
 import streamlit as st
 from sklearn.preprocessing import MinMaxScaler
+import pandas as pd
+import seaborn as sns
+import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.optimizers import Adam
-import pandas as pd
-import seaborn as sns
 
 st.write("# Simple Advertising Prediction App") #write title
 st.write("This app predicts the **Sales** type!") #write as subtitle
