@@ -20,7 +20,7 @@ df = user_input_features()
 file_path = "AdvertisingANN.h5"
 
 try:
-    with open(file_path, "rb" as file:
+    with open(file_path, "rb") as file:
         loaded_model = pickle.load(file)
 
 input_data = pd.DataFrame(df, index=(0)
