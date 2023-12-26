@@ -47,7 +47,6 @@ def main():
 
     # Debugging information
     st.write("Current working directory:", os.getcwd())
-    st.write("List of files in the directory:", os.listdir())
 
 if __name__ == "__main__":
     main()
